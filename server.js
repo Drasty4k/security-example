@@ -34,13 +34,16 @@ passport.use(new Strategy(AUTH_OPTIONS, verifyCallback))
 // SERIALIZE - saving our data to a cookie that's going to be passed around to the users
 // Save the session to the cookie
 passport.serializeUser((user, done) => {
-  done(null, user);
+  done(null, user.id);
 });
 
 // DESERIALIZE - loading that user data from that cookie into a value that we can read
 // Read the session from the cookie
-passport.deserializeUser((obj, done) => {
-  done(null, obj);
+passport.deserializeUser((id, done) => {
+  // User.findById(id).then(user => {
+  //   done(null, user);
+  // });
+  done(null, id);
 });
 
 const app = express();
