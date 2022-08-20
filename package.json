@@ -19,6 +19,8 @@
   "homepage": "https://github.com/Drasty4k/security-example#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "helmet": "^5.1.1"
+    "helmet": "^5.1.1",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0"
   }
 }
